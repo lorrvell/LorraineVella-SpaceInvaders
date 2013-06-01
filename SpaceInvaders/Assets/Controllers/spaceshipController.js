@@ -14,7 +14,7 @@ var n:int;
 
 function Start ()
 {
-	health = 20;
+	health = 100;
 	shotsfired = 0;
 	shotshit = 0;
 	score = 0;
@@ -45,9 +45,9 @@ function Update ()
 	}
 	else 
 	{
-		if (health > 20)
+		if (health > 100)
 		{
-			health = 20;
+			health = 100;
 		}
 	}
 	
@@ -107,7 +107,7 @@ function OnTriggerEnter(other:Collider)
 	
 	if(other.gameObject.tag=="healthboost")
 	{
-		if (health < 20)
+		if (health < 100)
 		{
 			health = health + 5;
 		}
